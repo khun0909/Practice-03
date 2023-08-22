@@ -1,0 +1,200 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap"); /* 구글 폰트 가져오기 */
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box; /* 테두리 기준으로 크기 설정 */
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+/* 전체 배경 및 프로필 박스 생성 */
+body {
+	background-color: #c5e8f5; /* 전체 배경색 */
+}
+section {
+	width: 350px;
+	padding: 30px;
+	background-color: #fff;
+	margin: 50px auto; /* 가운데 정렬 */
+	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); /* 그림자 */
+	border-radius: 10px; /* 모서리 둥글게 */
+}
+
+/* 프로필 박스 상단 버튼 만들기 */
+section nav.menu {
+	width: 100%; /* 가로폭 100% : section의 100%*/
+}
+
+section nav.menu::after { /* 가상요소 */
+	content: "";     /* 내용 없음 */
+	display: block;  /* 블록 요소로 변경 */
+	clear: both; 	 /* float 속성 해제 */
+}
+section nav.menu a {
+	font-size: 20px;
+	color: #777;
+}
+section nav.menu a:nth-of-type(1) {  /* 1번째 a요소 */
+	float: left; /* 왼쪽 정렬 */
+}
+section nav.menu a:nth-of-type(2) {  /* 2번째 a요소 */
+	float: right; /* 오른쪽 정렬 */
+}
+
+/* 프로필 영역 설정 */
+section article.profile {
+	width: 100%;  /* 가로폭 100% : section의 100%*/
+	text-align: center;  /* 가운데 정렬 */
+}
+section article.profile img {
+	width: 200px; /* 가로폭 200px */
+	height: 200px; /* 세로폭 200px */
+	border-radius: 50%; /* 원형으로 만들기 */
+	margin-bottom: 20px; /* 아래쪽 여백 20px */
+}
+section article.profile h1 {
+	font-weight: bold; /* 글자 굵게 */
+	font-size: 20px; /* 글자 크기 20px */
+	font-family: Arial, Helvetica, sans-serif; /* 글꼴 설정 */
+	color: #777;
+	margin-bottom: 25px; /* 아래쪽 여백 30px */
+}
+section article.profile h2 {
+	font-weight: normal; /* 글자 굵기 해제 */
+	font-size: 16px; /* 글자 크기 16px */
+	font-family: Arial, Helvetica, sans-serif; /* 글꼴 설정 */
+	color: #bbb;
+	margin-bottom: 25px; /* 아래쪽 여백 30px */
+}
+section a.btnView {
+	display: block; /* 블록 요소로 변경 */
+	width: 150px; /* 가로폭 150px */
+	height: 40px; /* 세로폭 40px */
+	margin: 0 auto 20px; /* 가운데 정렬, 아래쪽 여백 20px */
+	background-color: #444; /* 배경색 */
+	border-radius: 18px; /* 모서리 둥글게 */
+	font-weight: bold; /* 글자 굵게 */
+	font-size: 11px; /* 글자 크기 11px */
+	font-family: Arial, Helvetica, sans-serif; /* 글꼴 설정 */
+	color: #fff; /* 글자색 */
+	line-height: 40px; /* 높이값과 같게 */
+	text-align: center; /* 가운데 정렬 */
+	background: linear-gradient(45deg, #4a95ff, #35e0f7); /* 그라데이션 배경색 */
+	box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1); /* 그림자 */
+}
+
+/* 연락처 목록 설정 */
+section ul.contact {
+	margin-bottom: 25px; /* 아래쪽 여백 25px */
+}
+section ul.contact li {
+	width: 100%; /* 가로폭 100% */
+	padding: 10px 0px; /* 위아래 여백 10px, 좌우 여백 0px */
+	border-bottom: 1px solid #eee; /* 밑줄 */
+}
+section ul.contact li:last-child {  /* 마지막 li요소(가상클래스) */
+	border-bottom: none; /* 밑줄 없애기 */
+}
+section ul.contact li i {
+	width: 20%; /* 가로폭 20% */
+	text-align: center; /* 가운데 정렬 */
+	color: #555; /* 글자색 */
+	font-size: 15px; /* 글자 크기 15px */
+	text-shadow: 2px 2px 2px #ddd; /* 그림자 */
+}
+section ul.contact li span {
+	font-weight: normal; /* 글자 굵기 해제 */
+	font-size: 15px; /* 글자 크기 15px */
+	font-family: 'Franklin Gothic Medium', Arial;
+	color: #555; /* 글자색 */
+}
+
+ /* 멤버별 링크 설정*/
+ section nav.others {
+	width: 100%; /* 가로폭 100% */
+	text-align: center; /* 가운데 정렬 */
+ }
+ section nav.others a {
+	display: inline-block; /* 인라인 블록 요소로 변경 */
+	width: 30px; /* 가로폭 30px */
+	height: 30px; /* 세로폭 30px */
+	border-radius: 50%; /* 원형으로 만들기 */
+	margin: 0px 10px; /* 위아래 여백 0px, 좌우 여백 10px */
+	opacity: 0.5; /* 투명도 50% */
+	filter: saturate(0.7); /* 채도 70% */
+ }
+ section nav.others a.on {
+	opacity: 1; /* 투명도 100% */
+	filter: saturate(1); /* 채도 100% */
+ }
+ section nav.others a:nth-of-type(1) {
+	background-color: #35e0f7;
+	box-shadow: 5px 5px 10px rgba(74, 255, 255, 0.7);
+ }
+ section nav.others a:nth-of-type(2) {
+	background-color: #55f5cd;
+	box-shadow: 5px 5px 10px rgba(85, 254, 178, 0.7);
+ }
+ section nav.others a:nth-of-type(3) {
+	background-color: #ff80df;
+	box-shadow: 5px 5px 10px rgba(255, 128, 223, 0.7);
+ }
+ section nav.others a:nth-of-type(4) {
+	background-color: #a794fd;
+	box-shadow: 5px 5px 10px rgba(167, 148, 253, 0.7);
+ }
+
+ /* 멤버별 프로필 화면 설정(완성) */
+ /* member1 */
+ body.member1 {
+	background-color: #ebfaff;
+ }
+ body.member1 section article.profile img {
+	box-shadow: 5px 15px 30px rgba(173, 216, 230, 0.8);
+ }
+ body.member1 section a.btnView {
+	background: linear-gradient(45deg, #4affff, #35e0f7);
+	box-shadow: 5px 10px 20px rgba(0, 255, 255, 0.493);
+}
+
+/* member2 */
+body.member2 {
+	background-color: #edffeb;
+}
+body.member2 section article.profile img {
+	box-shadow: 5px 15px 20px #bdccb783; 
+}
+body.member2 section a.btnView {
+	background: linear-gradient(45deg, #a0ff9d, #55f5b2);   
+    box-shadow: 5px 10px 20px rgba(33, 250, 105, 0.3); 
+}
+
+/* member3 */
+body.member3 {
+	background-color: #fff3fd;
+}
+body.member3 section article.profile img {
+	box-shadow: 5px 15px 20px  rgba(252, 99, 214, 0.2); 
+}
+body.member3 section a.btnView {
+	background: linear-gradient(45deg, #ef74ff, #ff11c4);   
+	box-shadow: 5px 10px 20px rgba(255, 17, 196, 0.357); 
+}
+
+/* member4 */
+body.member4 {
+	background-color: #f5f0ff;
+}
+body.member4 section article.profile img {
+	box-shadow: 5px 15px 20px rgba(183, 82, 250, 0.2);
+}
+body.member4 section a.btnView {
+	background: linear-gradient(45deg, #8e74ff, #a011ff);   
+	box-shadow: 5px 10px 20px rgba(160, 17, 255, 0.4);
+}
